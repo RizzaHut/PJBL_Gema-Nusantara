@@ -1,37 +1,60 @@
 body {
-    margin-top:0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+    padding-top: 70px;
     font-family: "Poppins"; 
     background-color: #F7F4E9;
-    color: #000000;
+    color: #000;
 }
 
 .nav {
-   /*  border:1px solid #000000; */
-    background-color:#F7F4E9;
-    padding: 1em;
+    background-color: #F7F4E9;
+    font-family: "Inter"; 
+    padding: 0.5em 1em;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    box-shadow: 0px 0px 10px 0px #424242;
+    box-shadow: 0 0 10px #8d8a8a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
-.nav .logo {
+.logo {
     width: 50px;
-    height: auto;
     display: flex;
     align-items: center;
-    justify-content: flex-start;
     margin-right: auto;
     cursor: pointer;
 }
 
-.nav p {
+.logo p {
     font-size: 10px;
     line-height: 1em;
     font-weight: 700;
     color: #6D4A37;
+    margin: 0;
+}
+
+.nav .profile:hover {
+    transform: scale(1.1);
+}
+
+.nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #918d8a;
+    font-size: 16px;
+    margin-right: 2em;
+    transition: all 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: #000;
+    font-weight: 900;
 }
 
 .nav .profile {
@@ -40,96 +63,99 @@ body {
     cursor: pointer;
 }
 
-.nav a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #918d8a;
-    margin-right: auto;
-    font-size: 16px;
-    margin-right: 2em;
-}
-
-.nav a.active {
-    text-decoration: none;
-    font-weight: 900;
-    color: #000;
-}
-
-.nav a:hover {
-    color: #000000;
-    font-weight: 900;
-}
-
 
 h1 {
     font-weight: 300;
     font-size: 40px;
     text-align: center;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 50px auto;
 }
+
+/* .cerita-container {
+    border: 1px solid #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 100px;
+    max-width: 1300px;
+    margin: 150px auto;
+    padding: 0;
+} */
 
 .cerita-container {
-    /* border: 2px solid #040404; */
-    display: flex;
-    width:auto;
-    height: auto;
-    margin-top: 150px;
-     flex-wrap: wrap;
-     align-content: flex-start;
-    margin-right: 70px;
-    margin-left: 70px;
-    gap: 110px;
-    padding-bottom: 200px;
+    display: grid;
+    grid-template-columns: repeat(4, 200px);
+    gap: 100px;
+    justify-content: center;
+    margin: 150px auto 0;
+    padding: 0 70px 200px;
 }
 
-.cerita-wrapper{
-    color: #F7F4E9;
-    width: 200px; 
-    height: 350px; 
+@media (max-width: 1400px) {
+    .cerita-container {
+        grid-template-columns: repeat(3, 200px);
+        gap: 90px;
+    }
+}
+
+@media (max-width: 1050px) {
+    .cerita-container {
+        grid-template-columns: repeat(2, 200px);
+        gap: 80px;
+        padding: 0 40px 150px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cerita-container {
+        grid-template-columns: repeat(1, 200px);
+        gap: 70px;
+        padding: 0 20px 100px;
+    }
+    
+    h1 {
+        font-size: 28px;
+        margin: 30px auto;
+    }
+}
+.cerita-wrapper {
+    width: 200px;
     padding: 15px;
-    border: 1px solid #ccc;
     border-radius: 14px;
     background-color: #6D4A36;
+    color: #F7F4E9;
     display: flex;
     flex-direction: column;
+    gap: 10px;
 }
 
-.sampul{
-    width: 200px;
+.sampul {
+    width: 100%;
     height: 270px;
     border-radius: 6px;
-    margin-top: 0;
     object-fit: cover;
-    justify-content: center;
-    flex-shrink: 0;
 }
 
 .cerita-wrapper h2 {
-    margin: 0px 10px 5px 0px;
+    margin: 0;
     font-weight: 600;
     font-size: 15px;
-    text-wrap: wrap;
-    height: 60px; 
-    overflow: ellipsis; 
+    height: 60px;
     display: flex;
     align-items: center;
 }
 
 .cerita-wrapper hr {
-    width: 100%;
     margin: 0;
     border: none;
     border-top: 1px solid #F7F4E9;
 }
 
+/* Rating */
 .rating {
     display: flex;
     align-items: center;
-    gap: 8px; 
-    margin-top: 5px;
+    gap: 8px;
 }
 
 .star {
@@ -140,12 +166,32 @@ h1 {
 .rating-number {
     font-size: 16px;
     font-weight: 500;
-    color: #F7F4E9;
-    margin-right: auto; 
+    margin-right: auto;
 }
 
 .icon-small {
     width: 19px;
     height: 19px;
     cursor: pointer;
+    transition: transform 0.2s ease;
 }
+
+.icon-small:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    background-color: #FFF5E7;
+    display: flex;
+    align-items: center;
+}
+
+footer #tentang-web {
+    display: block;
+}
+
+footer p {
+    font-size: 10px;
+    margin: 0 70% 0 0;
+}
+
