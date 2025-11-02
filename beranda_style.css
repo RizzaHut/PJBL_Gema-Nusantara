@@ -1,44 +1,118 @@
 body {
-    margin-top:0;
-    margin-left: 0;
-    margin-right: 0;
+    margin: 0;
+    padding-top: 70px;
     font-family: "Poppins"; 
-    background-color: #F7F4E9;
-    color: #000000;
+    background-color: #FEFDF7;
+    color: #000;
 }
 
-.nav {
-   /*  border:1px solid #000000; */
-    background-color:#F7F4E9;
-    padding: 1em;
+nav {
+    background-color: #FEFDF7;
+    font-family: 'inter'; 
+    padding: 0.5em 1em;
     display: flex;
-    justify-content: flex-end;
     align-items: center;
-    box-shadow: 0px 0px 10px 0px #424242;
+    box-shadow: 0 0 10px #8d8a8a;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
 }
 
-.nav .profile {
+.logo {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    margin-right: auto;
+    cursor: pointer;
+}
+
+.logo p {
+    font-size: 12px;
+    line-height: 1em;
+    font-weight: 600;
+    color: #6D4A37;
+    margin: 0;
+}
+
+nav .profile:hover {
+    transform: scale(1.1);
+}
+
+nav a {
+    text-decoration: none;
+    font-weight: 500;
+    color: #918d8a;
+    font-size: 16px;
+    margin-right: 2em;
+    transition: all 0.3s ease;
+}
+
+nav a:hover, nav a.active {
+    color: #000;
+    font-weight: 700;
+}
+
+nav .profile {
     width: 30px;
     height: 30px;
     cursor: pointer;
 }
 
-.nav a {
-    text-decoration: none;
-    font-weight: 500;
-    color: #918d8a;
-    margin-right: auto;
-    font-size: 16px;
-    margin-right: 2em;
+h1 {
+    font-weight: 300;
+    font-size: 40px;
+    text-align: center;
+    margin: 50px auto;
 }
 
-.nav a.active {
+#jelajahi{
+    display: flex;
+    justify-content: center;
+    width: 5em;
+    padding: 10px;
+    border-radius: 20px;
+    font-family: 'inter';
+    font-weight: 700;
+    letter-spacing: 0.8px;
+    font-size: 20px;
     text-decoration: none;
-    font-weight: 900;
-    color: #000;
+    color: white;
+    background-color: #6D4A37;
 }
 
-.nav a:hover {
-    color: #000000;
-    font-weight: 900;
+.cerita_row img {
+    width: 170px;
+    height: 250px;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 5px 10px #8d8a8a;
 }
+
+.cerita_row {
+    margin: 20px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
+
+.first {
+    position: relative;
+    top: 0;
+}
+.second {
+    position: relative;
+    top: 40px;
+}
+.third {
+    position: relative;
+    top: 80px;
+}
+
+
+
+
+

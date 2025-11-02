@@ -70,23 +70,32 @@ h1 {
     margin: 50px auto;
 }
 
+input, button {
+    border-radius: 45px;
+    padding: 0.5em 2em;
+}
+
+.search_bar {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+}
 .cerita-container {
     display: grid;
     grid-template-columns: repeat(4, 200px);
     gap: 100px;
-    justify-content: center;
-    margin: 150px auto 0;
-    padding: 0 70px 200px;
+    margin: 150px 0 0;
+    padding: 0 80px 200px;
 }
 
-@media (max-width: 1400px) {
+@media (min-width: 801px) and (max-width: 1024px) {
     .cerita-container {
         grid-template-columns: repeat(3, 200px);
         gap: 90px;
     }
 }
 
-@media (max-width: 1050px) {
+@media (max-width: 800px) {
     .cerita-container {
         grid-template-columns: repeat(2, 200px);
         gap: 80px;
@@ -94,7 +103,7 @@ h1 {
     }
 }
 
-@media (max-width: 600px) {
+@media (max-width: 500px) {
     .cerita-container {
         grid-template-columns: repeat(1, 200px);
         gap: 70px;
@@ -149,6 +158,8 @@ h1 {
 .star {
     width: 20px;
     height: 20px;
+    cursor: pointer;
+     transition: transform 0.2s ease;
 }
 
 .rating-number {
@@ -164,12 +175,13 @@ h1 {
     transition: transform 0.2s ease;
 }
 
-.icon-small:hover {
+.icon-small:hover, .star:hover {
     transform: scale(1.2);
-    font-size: 16px;
-    line-height: 1.6;
-    padding: 40px 15px;
 }
+
+  /*   font-size: 16px;
+    line-height: 1.6;
+    padding: 40px 15px; */
 
 footer {
     background-color: #FFF5E7;
@@ -179,10 +191,18 @@ footer {
 }
 
 .footer_top {
-    padding: 3em 5em;
+    padding: 3em 4em;
     display: flex;
-    flex-flow: row wrap;
     gap: 150px;
+}
+
+.footer_bottom {
+    padding: 0.5em 4em;
+    text-align: center;
+}
+
+.footer_bottom hr {
+    border-top: 1.2px solid #000000;
 }
 
 #tentang-web, #navigasi, #kontak{
