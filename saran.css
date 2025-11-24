@@ -67,7 +67,7 @@ nav .profile {
     cursor: pointer;
 }
 
-.section-top {
+.saran_header {
     display: flex;
     justify-content: start;
     background: #FFF5E7;
@@ -78,7 +78,7 @@ nav .profile {
     top:0;
 }
 
-.section-top h1 {
+.saran_header h1 {
     font-size: 30px;
     font-weight: 500;
     margin: 0;
@@ -136,7 +136,7 @@ nav .profile {
     min-height: 200px;
 }
 
-.btn-submit {
+.kirim {
     width: 100%;
     padding: 0.85em;
     background-color: #6D4A37;
@@ -151,13 +151,13 @@ nav .profile {
     margin-top: 1.5em;
 }
 
-.btn-submit:hover {
+.kirim:hover {
     background-color: #5a3a2a;
     transform: translateY(-2px);
     box-shadow: 0 4px 12px rgba(109, 74, 55, 0.3);
 }
 
-.section-bottom {
+.alasan_saran {
     background-color: #FEFDF7;
     padding: 40px 90px;
     max-width: 1400px;
@@ -165,14 +165,14 @@ nav .profile {
     margin: 0 auto;
 }
 
-.section-bottom h2 {
+.alasan_saran h2 {
     font-size: 25px;
     font-weight: 400;
     margin-bottom: 1em;
     color: #000;
 }
 
-.section-bottom ul {
+.alasan_saran ul {
     list-style-type: disc;
     padding-left: 1.5em;
     line-height: 1.5;
@@ -180,7 +180,7 @@ nav .profile {
     font-size: 13px;
 }
 
-.section-bottom li {
+.alasan_saran li {
     margin-bottom: 0.7em;
 }
 
@@ -223,15 +223,14 @@ footer a {
     color: #000;
 }
 
-/* Responsive */
 @media (max-width: 968px) {
-    .section-top {
+    .saran_header {
         grid-template-columns: 1fr;
         gap: 2.5em;
         padding: 2.5em 1.5em 5em 1.5em;
     }
 
-    .section-top h1 {
+    .saran_header h1 {
         font-size: 2em;
         text-align: center;
     }
@@ -240,7 +239,8 @@ footer a {
         padding: 2em 2.5em;
     }
 
-    .section-bottom {
+    .alasan_saran
+ {
         padding: 3em 1.5em 4em 1.5em;
     }
 }
