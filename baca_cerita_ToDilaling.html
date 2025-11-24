@@ -109,20 +109,32 @@
                         <div class="isi_ulasan">
                             <p>permaisuri queen deserve better honestly... masa suami sendiri segitu kejamnya sama anak2
                                 mereka??? divorce him bestie 👑</p>
-                            <p class="tanggal">2025 - 07 - 13</p>
+                            <p class="tanggal">2025 - 10 - 13</p>
                         </div>
                     </div>
 
                     <div class="ulasan">
                         <div class="ulasan_top">
                             <img class="profile" src="cr_wrapper/account.png" alt="User Icon">
-                            <h3>Mahardika</h3>
+                            <h3>Fahreza</h3>
                             <div class="rating">★★★★★</div>
                         </div>
                         <div class="isi_ulasan">
                             <p>Cerita ini mengingatkan pada pepatah 'takut akan bayangan sendiri'. Raja yang takut
                                 kehilangan tahta sampai rela mengorbankan darah dagingnya sendiri. Tragis sekali.</p>
-                            <p class="tanggal">2025 - 07 - 13</p>
+                            <p class="tanggal">2025 - 10 - 11</p>
+                        </div>
+                    </div>
+
+                    <div class="ulasan">
+                        <div class="ulasan_top">
+                            <img class="profile" src="cr_wrapper/account.png" alt="User Icon">
+                            <h3>Daqiqul</h3>
+                            <div class="rating">★★★★★</div>
+                        </div>
+                        <div class="isi_ulasan">
+                            <p>gak seru, jelek</p>
+                            <p class="tanggal">2025 - 10 - 9</p>
                         </div>
                     </div>
                 </div>
@@ -136,11 +148,31 @@
                     <a href="#">3</a>
                     <a href="#">&raquo;</a>
                 </div>
-
-                <div class="ulasan_button">
-                    <button>Beri Ulasan</button>
-                </div>
             </div>
+
+            <div class="ulasan_button">
+                <button id="open_ulasan">Beri Ulasan</button>
+            </div>
+
+            <div id="popup">
+                <span id="close_ulasan">x</span>
+
+                <h2>Tulis Ulasan</h2>
+
+                <p>Ceritakan kesan dan pengalamanmu membaca To Dilaling</p>
+                <div class="beri_rating">
+                    <img src="popup/star.svg">
+                    <img src="popup/star.svg">
+                    <img src="popup/star.svg">
+                    <img src="popup/star.svg">
+                    <img src="popup/star.svg">
+                </div>
+
+                <textarea id="deskripsi" name="deskripsi_cerita" placeholder="Tulis ulasanmu disini..."></textarea>
+
+                <button class="kirim_ulasan">Kirim Saran</button>
+            </div>
+        </div>
         </div>
     </section>
     <footer>
@@ -180,6 +212,23 @@
         </div>
     </footer>
 
+    
+    <script>
+        const openUlasan = document.getElementById('open_ulasan');
+        const closeUlasan = document.getElementById('close_ulasan');
+        const popup = document.getElementById('popup');
+
+        function openPopUpUlasan() {
+            popup.classList.add('active');
+        }
+        function closePopUpUlasan() {
+            popup.classList.remove('active');
+        }
+
+        openUlasan.addEventListener('click', openPopUpUlasan);
+        closeUlasan.addEventListener('click', closePopUpUlasan);
+    </script>
 
 </body>
+
 </html>
