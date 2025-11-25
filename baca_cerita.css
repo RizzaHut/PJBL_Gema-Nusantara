@@ -308,9 +308,6 @@ nav .profile {
 
 #popup.active {
     display: flex;
-    /* position: absolute;
-    top: auto;
-    left: auto; */
     flex-direction: column;
     box-shadow: 0 0 10px #8d8a8a;
 }
