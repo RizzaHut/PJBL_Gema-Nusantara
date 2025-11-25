@@ -13,6 +13,11 @@
     </style>
     <link rel="icon" href="cr_wrapper/logo_web.png">
     <title>Gema Nusantara</title>
+
+    <!-- TAMBAHKAN LIBRARY CHART.JS DI SINI -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <script
+        src="https://cdnjs.cloudflare.com/ajax/libs/chartjs-plugin-datalabels/2.2.0/chartjs-plugin-datalabels.min.js"></script>
 </head>
 
 <body>
@@ -50,17 +55,63 @@
 
             </div>
 
-            <div class="cerita_container">
+            <section class="riwayat">
 
-            </div>
+                <div class="riwayat_header">
+                    <h3>Riwayat Membacamu</h3>
+                    <a href="dashboard_user_history.html">Lihat Semua ></a>
+                </div>
+
+                <div class="cerita_container">
+                    <div class="cerita_wrapper">
+                        <img class="sampul" src="cr_wrapper/cover_cr/batu_menangis.jpg"
+                            alt="Gambar Cerita Batu Menangis">
+                        <h2>Batu Menangis</h2>
+                        <hr>
+                        <div class="rating">
+                            <img class="star" src="cr_wrapper/star.png" title="Rating 4.5">
+                            <span class="rating-number">4.4</span>
+                            <img class="icon-small" src="cr_wrapper/like.png" title="Favorite">
+                            <img class="icon-small" src="cr_wrapper/icon.png" title="Share">
+                        </div>
+                    </div>
+
+                    <div class="cerita_wrapper">
+                        <img class="sampul" src="cr_wrapper/cover_cr/batu_menangis.jpg"
+                            alt="Gambar Cerita Batu Menangis">
+                        <h2>Batu Menangis</h2>
+                        <hr>
+                        <div class="rating">
+                            <img class="star" src="cr_wrapper/star.png" title="Rating 4.5">
+                            <span class="rating-number">4.4</span>
+                            <img class="icon-small" src="cr_wrapper/like.png" title="Favorite">
+                            <img class="icon-small" src="cr_wrapper/icon.png" title="Share">
+                        </div>
+                    </div>
+
+                    <div class="cerita_wrapper">
+                        <img class="sampul" src="cr_wrapper/cover_cr/batu_menangis.jpg"
+                            alt="Gambar Cerita Batu Menangis">
+                        <h2>Batu Menangis</h2>
+                        <hr>
+                        <div class="rating">
+                            <img class="star" src="cr_wrapper/star.png" title="Rating 4.5">
+                            <span class="rating-number">4.4</span>
+                            <img class="icon-small" src="cr_wrapper/like.png" title="Favorite">
+                            <img class="icon-small" src="cr_wrapper/icon.png" title="Share">
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
 
         </div>
 
         <div class="dashboard_kanan">
 
-            <div class="grafik_baca">
-                <h2>Jumlah Membaca Perhari</h2>
-                <img src="dashboard/grafik.png" alt="grafik batang jumlah membaca">
+            <div class="jumlah_membaca">
+                <canvas id="grafikMembaca"></canvas>
             </div>
 
             <div class="lanjut_baca">
@@ -95,12 +146,9 @@
             </div>
         </div>
 
-
-
-
-
     </section>
 
+    <script src="dashboard_user.js"></script>
 </body>
 
 </html>
