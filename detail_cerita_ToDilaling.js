@@ -1,3 +1,13 @@
+const openUlasan = document.getElementById('open_ulasan');
+const closeUlasan = document.getElementById('close_ulasan');
+const popup = document.getElementById('popup');
+
+function openPopUpUlasan() {
+    popup.classList.add('active');
+}
+function closePopUpUlasan() {
+    popup.classList.remove('active');
+}
 
 openUlasan.addEventListener('click', openPopUpUlasan);
 closeUlasan.addEventListener('click', closePopUpUlasan);
