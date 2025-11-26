@@ -28,6 +28,7 @@ const chart = new Chart(ctx, {
     },
     options: {
         indexAxis: 'y',
+        responsive: true,
         plugins: {
             datalabels: {
                 color: 'black',
@@ -38,12 +39,14 @@ const chart = new Chart(ctx, {
                 anchor: 'end',
                 display: true,
             }
+
+            
         },
         scales: {
             y: {
                 beginAtZero: true,
                 ticks: {
-                    stepSize: 8
+                    stepSize: 5,
                 }
             }
         }
