@@ -1,6 +1,6 @@
 body {
     margin: 0;
-    font-family: "Poppins"; 
+    font-family: "Poppins";
     background-color: #F6F7F8;
     color: #000;
 }
@@ -10,10 +10,10 @@ nav {
     top: 0;
     bottom: 0;
     left: 0;
-    height:100vmax;
+    height: 100vmax;
     background-color: #Fff;
     display: flex;
-    flex-direction: column;   
+    flex-direction: column;
     max-width: fit-content;
     align-items: center;
     padding: 0px 5px;
@@ -73,9 +73,9 @@ nav {
 .isi_rangkum {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
-    padding: 0px 20px 10px;  
+    padding: 0px 20px 10px;
     background-color: #Fff;
     border-radius: 8px;
     border: 1px solid #cccaca;
@@ -88,8 +88,9 @@ nav {
 }
 
 .isi_rangkum img {
-    width:60px;
-    height: 60px;
+    width: 50px;
+    height: 50px;
+    margin: 0;
 }
 
 .isi_rangkum h3 {
@@ -126,4 +127,33 @@ nav {
     margin: 0 0 10px 0;
     font-size: 20px;
     font-weight: 500;
+}
+
+.dashboard_kanan {
+    display: flex;
+    flex-direction: column;
+    gap:20px;
+}
+
+.cerita_terpopuler {
+    height: 200px;
+    padding: 15px 10px;
+    background-color: #fff;
+    border: 1px solid #cccaca;
+    border-radius: 8px;
+}
+
+.grafik_terpopuler {
+    display: flex;
+    flex-direction: row;
+}
+
+.grafik_detail {
+    display: flex;
+    flex-direction: column;
+}
+
+.isi_detail {
+    display: flex;
+    flex-direction: row;
 }
